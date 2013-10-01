@@ -10,3 +10,8 @@
       li= link_to 'About', '#about-us', class: 'about-us'
       li= link_to 'Earlier Posts', '#earlier', class: 'earlier-posts'
       li= link_to 'Search', '#search-form', class: 'search'
+
+javascript:
+  $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) {
+      e.stopPropagation();
+  });
