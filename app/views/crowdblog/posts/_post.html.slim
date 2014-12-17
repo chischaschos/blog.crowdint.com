@@ -2,7 +2,11 @@
   article.post
     h1= link_to post.title, main_app.post_path(*post.url_params)
     p.author
+      span
+        = 'by '
       = link_to post.author_name, main_app.posts_by_author_path(post.author.to_param)
+      span.separator
+        = '|'
       span
         = post.formatted_published_date
     .body class=(index_view ? 'short' :  '')

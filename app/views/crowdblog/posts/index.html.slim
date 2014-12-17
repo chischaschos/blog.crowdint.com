@@ -2,8 +2,8 @@
 = render 'application/nav_bar'
 
 section.posts
-  = render @posts, index_view: true
-
+  = render @posts.except_first, index_view: true
+  
   = will_paginate @posts, page_links: false
 
 - if Rails.env.production?

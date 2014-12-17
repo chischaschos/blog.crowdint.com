@@ -1,58 +1,44 @@
-#share {
-  background-color: white;
-  padding-top: 2.5em;
-  width: 100%;
+.share-about { background-color: $about-color; }
+.share-careers { background-color: $careers-color; }
+.share-contact { background-color: $contact-color; }
+.share-home, .share-portfolio, .share-blog { background-color: $home-color; }
+.share-team { background-color: $team-color; }
+.share-we-do { background-color: $we-do-color; }
+
+.share-blog {
+  
+}
+
+.share-body {
+  height: 374px;
+  padding-top: 2em;
 
   @include mq-tablet('portrait') { height: auto; }
-  @include mq-mobile { height: auto; }
+  @include mq-mobile() { padding-top: 1.125em;  height: auto; }
 }
 
-.posts {
+.share-title {
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 60pt;
+  line-height: 1.8em;
+
+  @include mq-tablet('portrait') { margin-bottom: 1.7em; }
+  @include mq-mobile() { font-size: 1.625em; line-height: 1.2em; margin-bottom: 1.7em; }
+}
+
+.share-post {
   text-align: left;
-  max-width: 960px;
-  margin: 0 auto;
 
-  .pagination {
-    margin-top: 2em;
-    text-align: center;
-
-    a {
-      color: $blog-color;
-      text-decoration: none;
-    }
-  }
-
-  @include mq-tablet() {
-    max-width: 768px;
-
-    pre {
-      code {
-        font-size: 1em;
-      }
-    }
-  }
-
-  @include mq-mobile() {
-    max-width: 640px;
-
-    pre {
-      code {
-        font-size: 1em;
-      }
-    }
-  }
-}
-
-.post {
   h1 {
-    font-size: 2.5em;
-    font-weight: 100;
-    line-height: 1.4em;
-    margin-bottom: 0;
+    font-size: 26pt;
+    font-weight: bold;
+    line-height: 1em;
+    margin-bottom: 1em;
   }
 
   a {
-    color: $blog-color;
+    color: $white;
     text-decoration: none;
   }
 
@@ -69,9 +55,9 @@
 
   hr {
     border-top: solid 1px $blog-color;
-    margin: 3em auto;
+    margin: 1em auto;
     height: 0;
-    width: 80%;
+    width: 100%;
   }
 
   p {
@@ -81,24 +67,39 @@
   }
 
   .author {
+    font-size: 16px;
+    line-height: 3em;
     margin-top: 0;
-    font-size: 0.8em;
+    margin-bottom: 2em;
+
+    .gravatar{
+      background-color: white;
+      float: left;
+      height: 40px;
+      padding: 4px;
+      width: 40px;
+    }
 
     a {
       font-weight: bold;
       font-size: 1.2em;
     }
-
+    span.by{
+      color: $white;
+    }
+    span.separator{
+      font-size: 1.5em;
+      color: $white;
+    }
     span {
-      margin-left: 0.5em;
+      margin-left: 1em;
       font-size: 1.2em;
-      color: lighten($gray, 30%);
+      color: lighten($white, 30%);
     }
   }
 
   ul {
     list-style-type: circle;
-    padding-left: 2em;
   }
 
   .short {
@@ -109,80 +110,16 @@
   }
 
   .more {
-    text-align: right;
+    text-align: center;
     display: block;
+    font-size: 1.2em;
+    line-height: 3em;
+    font-weight: 400;
   }
 
   p {
-    line-height: 1.5em;
-    font-size: 1.1em;
-  }
-}
-
-.post-footer {
-  .author-box {
-    min-height: 12em;
-    vertical-align: middle;
-    text-align: center;
-    width: 50%;
-    display: inline-block;
-
-    @include mq-mobile() {
-      width: 80%;
-      margin: 0 auto;
-    }
-  }
-
-  .details {
-    text-align: left;
-
-    @include mq-mobile() {
-      text-align: center;
-      margin-top: 2.5em;
-    }
-  }
-
-  .author {
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: 400;
-    margin: 1em auto;
-  }
-
-  .more-posts {
-    font-size: 1em;
-    text-transform: uppercase;
-    color: #9b9b9b;
-  }
-
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-    font-size: 1.3em;
-    line-height: 1.8em;
-
-    a {
-      color: $gray;
-    }
-  }
-
-  li {
-    margin-bottom: 1em;
-
-    span {
-      display: block;
-      font-size: 0.7em;
-      line-height: 0.8em;
-    }
-  }
-
-  .all-posts {
-    text-transform: uppercase;
-    font-size: 0.8em;
-  }
-
-  .social-links {
-    margin: 2em auto;
+    line-height: 1.3em;
+    font-size: 16px;
   }
 }
 

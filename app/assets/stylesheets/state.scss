@@ -21,7 +21,7 @@
 .is-animating {
   #mobile-menu { display: block; }
 
-  #header, #container, #footer {
+  #header, #container, #footer, #share {
     transition: transform .50s ease-in-out;
     -webkit-transition: -webkit-transform .50s ease-in-out;
   }
@@ -30,7 +30,7 @@
 .is-menu-visible {
   #mobile-menu { display: block; }
 
-  #header, #container, #footer { left: -270px }
+  #header, #container, #footer, #share { left: -270px }
 }
 
 .is-visible {

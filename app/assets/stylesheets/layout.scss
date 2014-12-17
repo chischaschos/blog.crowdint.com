@@ -52,6 +52,17 @@
   @include mq-mobile() { height: 280px; background-position-y: -21px; position: relative; }
 }
 
+#share {
+  background-image: image_url('footer_graphic.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  height: 660px;
+
+  @include mq-tablet('portrait') { height: 400px; }
+  @include mq-mobile() { height: 280px; background-position-y: -21px; position: relative; }
+}
+
 .l-wrapper {
   margin: 0 auto;
   width: 1024px;

@@ -1,0 +1,17 @@
+article.share-post
+  h1= link_to post.title, main_app.post_path(*post.url_params)
+  hr
+  p.author
+    = image_tag post.author.gravatar_url, class: 'gravatar'
+    span.by
+      = 'by '
+    = link_to post.author_name, main_app.posts_by_author_path(post.author.to_param)
+    span.separator
+      = '|'
+    span 
+      = post.formatted_published_date
+  .body class='short'
+    = post.short_description
+    = link_to 'Read more ...', main_app.post_path(*post.url_params), class: 'more'
+
+  .social-links.row= render 'crowdblog/posts/social', post: post

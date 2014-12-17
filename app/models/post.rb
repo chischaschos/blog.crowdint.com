@@ -1,7 +1,9 @@
 class Post < Crowdblog::Post
   belongs_to :author, :class_name => "User"
   belongs_to :publisher, :class_name => "User"
-  SHORT_DESCRIPTION_SIZE = 300
+  SHORT_DESCRIPTION_SIZE = 400
+
+  scope :except_first, -> { where.not(id: all.first.id )}
 
   searchable do
     text :title, :body

@@ -2,6 +2,7 @@ class Crowdblog::PostsController < ApplicationController
 
   def index
     @posts = ::Post.for_index.paginate(:page => params[:page], :per_page => 5)
+    
     @history = ::Post.for_history - @posts
   end
 
